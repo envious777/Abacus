@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/particle.css">
+	<script src="js/index.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+
+	<script>
+		window.onload = function() {
+			var d = new Date().getTime();
+			document.getElementById("tid").value = d;
+			var num = Math.floor(Math.random() * 90000) + 10000 + d % 7;
+			document.getElementById("order_id").value = num;
+		};
+	</script>
+
+</head>
+<body>
+	<div class="table table-hover text-center">
+		<form method="post" name="customerData" action="ccavRequestHandler.php">
+			<div class="text-center">
+				<h3 class="fit">Workshop Registration & Payment</h3>
+			</div>
+			<hr class="content-divider">
+			<img src="http://abacus.org.in/images/logo.png" width="25%" height="25%" align="center"></font></caption></div>
+			<div class="container">
+			<div class="row">
+				<table class="table table-striped" align="center">
+
+					<tr>
+						<td><strong>TID</strong></td><td><input type="text" class="form-control" name="tid" id="tid" readonly /></td>
+					</tr>
+					<tr>
+						<td><strong>Order Id</strong></td><td><input type="text" class="form-control" name="orclass="form-control"der_id" id="order_id" readonly/></td>
+					</tr>
+					<input type="hidden" name="merchant_id" value="90967"/>
+					<input type="hidden" name="currency" value="INR"/>
+					<input type="hidden" name="cancel_url" value="http://abacus.org.in/payment/ccavResponseHandler.php"/>
+					<input type="hidden" name="redirect_url" value="http://abacus.org.in/payment/ccavResponseHandler.php"/>
+					<input type="hidden" name="integration_type" value="iframe_normal"/>
+					<input type="hidden" name="billing_state" value="TN"/>
+					<input type="hidden" name="language" value="EN"/>
+					<input type="hidden" name="billing_country" value="India"/>
+				<tr>
+				<td><strong>Name</strong></td><td><input type="text" class="form-control" name="billing_name" value="" class="tb-inp"/></td>
+			        </tr>
+			        <tr>
+			        	<td><strong>College Name</strong></td><td><input type="text" class="form-control" name="billing_address" value="" class="tb-inp"/></td>
+			        </tr>
+			        <tr>
+			        	<td><strong>City</strong></td><td><input type="text" class="form-control" name="billing_city" value="" class="tb-inp"/></td>
+			        </tr>
+			        
+			        <tr>
+			        	<td><strong>PIN Code</strong></td><td><input type="text" class="form-control" name="billing_zip" value="" class="tb-inp"/></td>
+			        </tr>
+			        <tr>
+			        	<td><strong>Mobile</strong></td><td><input type="text" class="form-control" name="billing_tel" value="" class="tb-inp"/></td>
+			        </tr>
+
+				
+				<tr>
+					<td><strong>Workshop</strong></td><td><select class="form-control" name="amount"><option value="750">Ruby on Rails</option><option value="600">Data Mining Workshop</option><option value="800">IBM's Bluemix</option><option value="750">Internet of Things</option> </select></td>
+				</tr>
+				 	
+			     	<tr>
+			        	<td><strong>Email ID</strong></td><td><input type="email" class="form-control" name="billing_email" class="tb-inp"/></td>
+			        </tr>
+			        <tr>
+			        	<td colspan="2" align="center"><input type="submit" value="CheckOut" class="btn btn-default"/></td>
+			        </tr>
+		      	</table>
+		      </form>
+		      </div>
+		      <div class="text-center" style="color:black">Note: If your Debit Card is not displayed in the list of Banks during Payment, Please enter it manually in the "Card Issuing Bank" Field and enter card number normally.</div>
+		      </div>
+		      </div>
+		      <div class="container">
+	  <h3 class="text-center fit">Workshop Cost</h2>      
+		<div class="row">
+		<div class="col-md-12">
+	  <table class="table table-striped">
+	    <thead>
+	      <tr>
+	        <th>Workshop</th>
+	        <th>Cost</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td>Data Mining</td>
+	        <td>&#8377; 600</td>
+	      </tr>
+	      <tr>
+	        <td>Internet of Things</td>
+	        <td>&#8377; 750</td>
+	      </tr>
+	      <tr>
+	        <td>Ruby on Rails</td>
+	        <td>&#8377; 750</td>
+	      </tr>
+		  <tr>
+	        <td>IBM's Bluemix</td>
+	        <td>&#8377; 800</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	  </div>
+	  </div>
+	</div>
+
+</body>
+</html>
